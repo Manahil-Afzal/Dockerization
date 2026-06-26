@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Roadmap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif
+        }
+
+        body {
+            background: #0f172a;
+            color: #fff;
+            line-height: 1.6
+        }
+
+        header {
+            background: linear-gradient(135deg, #2563eb, #06b6d4, #7c3aed);
+            padding: 60px 20px;
+            text-align: center
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            background: #111827;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold
+        }
+
+        section {
+            padding: 50px 10%;
+            border-bottom: 1px solid #243244
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-bottom: 15px
+        }
+
+        .hero h1 {
+            font-size: 52px
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin: 20px auto;
+            max-width: 700px
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #22c55e;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 20px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            transition: .3s
+        }
+
+        .card:hover {
+            transform: translateY(-8px)
+        }
+
+        .timeline li {
+            margin: 12px 0
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #334155;
+            padding: 10px
+        }
+
+        th {
+            background: #1e40af
+        }
+
+        /* Side-by-Side Tables Layout */
+        .table-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 35px;
+        }
+
+        .table-col {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #111827
+        }
+
+        /* Responsive Breakpoint for Mobile Screens */
+        @media (max-width: 900px) {
+            .table-row {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#about">About</a><a href="#roadmap">Roadmap</a><a href="#tools">Tools</a><a
+            href="#commands">Commands</a><a href="#projects">Projects</a>
+    </nav>
+
+    <header class="hero">
+        <h1>🚀 Complete DevOps Roadmap</h1>
+        <p>Learn DevOps from beginner to advanced with Linux, Git, Docker, AWS, CI/CD, Kubernetes, Terraform, Monitoring
+            and Production Deployment.</p>
+        <a class="btn" href="#roadmap">Start Learning</a>
+    </header>
+
+    <section id="about">
+        <h2>What is DevOps?</h2>
+        <p>DevOps combines software development and IT operations to automate software delivery, improve collaboration,
+            and deploy applications reliably.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Speed</h3>
+                <p>Automate builds and deployments.</p>
+            </div>
+            <div class="card">
+                <h3>Quality</h3>
+                <p>Continuous testing and monitoring.</p>
+            </div>
+            <div class="card">
+                <h3>Scalability</h3>
+                <p>Cloud infrastructure and containers.</p>
+            </div>
+            <div class="card">
+                <h3>Reliability</h3>
+                <p>Monitoring and rollback strategies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap">
+        <h2>Learning Roadmap</h2>
+
+        <div
+            style="width: 100%; overflow-x: auto; margin-bottom: 40px; padding: 20px; background: #1e293b; border-radius: 12px; border: 1px solid #334155;">
+            <svg viewBox="0 0 900 240" width="100%" height="100%" style="min-width: 800px;">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+                    </linearGradient>
+                    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6"
+                        orient="auto-start-reverse">
+                        <path d="M 0 2 L 10 5 L 0 8 z" fill="#38bdf8" />
+                    </marker>
+                </defs>
+
+                <path d="M 50 70 L 830 70 Q 860 70 860 120 Q 860 170 830 170 L 80 170" fill="none" stroke="url(#grad1)"
+                    stroke-width="4" marker-end="url(#arrow)" />
+
+                <g transform="translate(50, 40)">
+                    <rect width="140" height="60" rx="8" fill="#111827" stroke="#2563eb" stroke-width="2" />
+                    <text x="70" y="28" fill="#fff" font-family="Arial" font-size="12" font-weight="bold"
+                        text-anchor="middle">1. Foundations</text>
+                    <text x="70" y="45" fill="#94a3b8" font-family="Arial" font-size="10" text-anchor="middle">Linux,
+                        Networking, Git</text>
+                </g>
+
+                <g transform="translate(250, 40)">
+                    <rect width="140" height="60" rx="8" fill="#111827" stroke="#06b6d4" stroke-width="2" />
+                    <text x="70" y="28" fill="#fff" font-family="Arial" font-size="12" font-weight="bold"
+                        text-anchor="middle">2. Containerization</text>
+                    <text x="70" y="45" fill="#94a3b8" font-family="Arial" font-size="10" text-anchor="middle">Node.js,
+                        Docker, Compose</text>
+                </g>
+
+                <g transform="translate(450, 40)">
+                    <rect width="140" height="60" rx="8" fill="#111827" stroke="#06b6d4" stroke-width="2" />
+                    <text x="70" y="28" fill="#fff" font-family="Arial" font-size="12" font-weight="bold"
+                        text-anchor="middle">3. Cloud & IaC</text>
+                    <text x="70" y="45" fill="#94a3b8" font-family="Arial" font-size="10" text-anchor="middle">AWS,
+                        Terraform, Ansible</text>
+                </g>
+
+                <g transform="translate(650, 40)">
+                    <rect width="140" height="60" rx="8" fill="#111827" stroke="#7c3aed" stroke-width="2" />
+                    <text x="70" y="28" fill="#fff" font-family="Arial" font-size="12" font-weight="bold"
+                        text-anchor="middle">4. Orchestration</text>
+                    <text x="70" y="45" fill="#94a3b8" font-family="Arial" font-size="10"
+                        text-anchor="middle">Kubernetes & Helm</text>
+                </g>
+
+                <g transform="translate(150, 140)">
+                    <rect width="140" height="60" rx="8" fill="#111827" stroke="#22c55e" stroke-width="2" />
+                    <text x="70" y="28" fill="#fff" font-family="Arial" font-size="12" font-weight="bold"
+                        text-anchor="middle">6. Deployment</text>
+                    <text x="70" y="45" fill="#94a3b8" font-family="Arial" font-size="10" text-anchor="middle">NGINX,
+                        Prod Live</text>
+                </g>
+
+                <g transform="translate(450, 140)">
+                    <rect width="140" height="60" rx="8" fill="#111827" stroke="#7c3aed" stroke-width="2" />
+                    <text x="70" y="28" fill="#fff" font-family="Arial" font-size="12" font-weight="bold"
+                        text-anchor="middle">5. CI/CD & Metrics</text>
+                    <text x="70" y="45" fill="#94a3b8" font-family="Arial" font-size="10" text-anchor="middle">CI/CD,
+                        Prometheus, Grafana</text>
+                </g>
+            </svg>
+        </div>
+
+        <ol class="timeline"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 40px; padding-left: 20px;">
+            <li>Computer Fundamentals</li>
+            <li>Linux & Shell Scripting</li>
+            <li>Networking (HTTP, HTTPS, DNS, SSH)</li>
+            <li>Git & GitHub</li>
+            <li>Node.js Basics</li>
+            <li>Docker & Dockerfile</li>
+            <li>Docker Compose</li>
+            <li>AWS (IAM, EC2, S3, VPC)</li>
+            <li>CI/CD (GitHub Actions, Jenkins)</li>
+            <li>Terraform</li>
+            <li>Ansible</li>
+            <li>Kubernetes</li>
+            <li>Helm</li>
+            <li>Prometheus & Grafana</li>
+            <li>NGINX</li>
+            <li>Production Deployment</li>
+        </ol>
+    </section>
+
+    <section id="tools">
+        <h2>Technology Stack</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🐧 Linux</h3>
+                <p>Commands, permissions, bash.</p>
+            </div>
+            <div class="card">
+                <h3>🐙 Git</h3>
+                <p>Version control and collaboration.</p>
+            </div>
+            <div class="card">
+                <h3>🐳 Docker</h3>
+                <p>Images, containers, volumes, networks.</p>
+            </div>
+            <div class="card">
+                <h3>☁ AWS</h3>
+                <p>EC2, IAM, S3, VPC, CloudWatch.</p>
+            </div>
+            <div class="card">
+                <h3>⚙ CI/CD</h3>
+                <p>GitHub Actions and Jenkins.</p>
+            </div>
+            <div class="card">
+                <h3>☸ Kubernetes</h3>
+                <p>Pods, Deployments, Services.</p>
+            </div>
+            <div class="card">
+                <h3>🏗 Terraform</h3>
+                <p>Infrastructure as Code.</p>
+            </div>
+            <div class="card">
+                <h3>📊 Monitoring</h3>
+                <p>Prometheus and Grafana.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="commands">
+        <h2>Essential Commands</h2>
+        <p style="margin-bottom: 30px; color: #94a3b8;">Master these foundational terminal commands across development
+            and systems environments.</p>
+
+        <div class="table-row">
+            <div class="table-col">
+                <h3 style="color: #38bdf8;">📂 1–10 Basic Navigation</h3>
+                <table>
+                    <tr>
+                        <th style="width: 35%;">Command</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td>pwd</td>
+                        <td>Show current directory</td>
+                    </tr>
+                    <tr>
+                        <td>ls</td>
+                        <td>List files and directories</td>
+                    </tr>
+                    <tr>
+                        <td>cd</td>
+                        <td>Change directory</td>
+                    </tr>
+                    <tr>
+                        <td>cd ..</td>
+                        <td>Move back one directory</td>
+                    </tr>
+                    <tr>
+                        <td>clear</td>
+                        <td>Clear terminal screen</td>
+                    </tr>
+                    <tr>
+                        <td>whoami</td>
+                        <td>Show current user</td>
+                    </tr>
+                    <tr>
+                        <td>uname -a</td>
+                        <td>Show system information</td>
+                    </tr>
+                    <tr>
+                        <td>history</td>
+                        <td>Show command history</td>
+                    </tr>
+                    <tr>
+                        <td>man ls</td>
+                        <td>Display manual of command</td>
+                    </tr>
+                    <tr>
+                        <td>echo "text"</td>
+                        <td>Print text to terminal</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table-col">
+                <h3 style="color: #38bdf8;">📄 11–20 File Operations</h3>
+                <table>
+                    <tr>
+                        <th style="width: 35%;">Command</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td>touch file.txt</td>
+                        <td>Create an empty file</td>
+                    </tr>
+                    <tr>
+                        <td>mkdir folder</td>
+                        <td>Create a new directory</td>
+                    </tr>
+                    <tr>
+                        <td>rm file.txt</td>
+                        <td>Remove (delete) a file</td>
+                    </tr>
+                    <tr>
+                        <td>rm -r folder</td>
+                        <td>Remove a directory and all files</td>
+                    </tr>
+                    <tr>
+                        <td>cp file1 file2</td>
+                        <td>Copy file1 to file2</td>
+                    </tr>
+                    <tr>
+                        <td>mv file folder/</td>
+                        <td>Move file to folder</td>
+                    </tr>
+                    <tr>
+                        <td>cat file.txt</td>
+                        <td>Display file content</td>
+                    </tr>
+                    <tr>
+                        <td>nano file.txt</td>
+                        <td>Edit file using nano editor</td>
+                    </tr>
+                    <tr>
+                        <td>head file.txt</td>
+                        <td>Show first lines of file</td>
+                    </tr>
+                    <tr>
+                        <td>tail file.txt</td>
+                        <td>Show last lines of file</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-col">
+                <h3 style="color: #38bdf8;">🔐 21–30 Permissions & Users</h3>
+                <table>
+                    <tr>
+                        <th style="width: 35%;">Command</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td>chmod 777 file</td>
+                        <td>Change file permissions</td>
+                    </tr>
+                    <tr>
+                        <td>chown user file</td>
+                        <td>Change file owner</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>Show user ID information</td>
+                    </tr>
+                    <tr>
+                        <td>groups</td>
+                        <td>Show user groups</td>
+                    </tr>
+                    <tr>
+                        <td>adduser name</td>
+                        <td>Add a new user</td>
+                    </tr>
+                    <tr>
+                        <td>passwd</td>
+                        <td>Change user password</td>
+                    </tr>
+                    <tr>
+                        <td>sudo command</td>
+                        <td>Execute command as admin</td>
+                    </tr>
+                    <tr>
+                        <td>su</td>
+                        <td>Switch to another user</td>
+                    </tr>
+                    <tr>
+                        <td>userdel name</td>
+                        <td>Delete a user</td>
+                    </tr>
+                    <tr>
+                        <td>who</td>
+                        <td>Show logged-in users</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table-col">
+                <h3 style="color: #38bdf8;">⚙️ 31–40 Process & System</h3>
+                <table>
+                    <tr>
+                        <th style="width: 35%;">Command</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td>ps</td>
+                        <td>Show running processes</td>
+                    </tr>
+                    <tr>
+                        <td>top</td>
+                        <td>Real-time process monitor</td>
+                    </tr>
+                    <tr>
+                        <td>kill PID</td>
+                        <td>Kill a process by PID</td>
+                    </tr>
+                    <tr>
+                        <td>df -h</td>
+                        <td>Show disk space usage</td>
+                    </tr>
+                    <tr>
+                        <td>du -sh</td>
+                        <td>Show size of directory</td>
+                    </tr>
+                    <tr>
+                        <td>free -m</td>
+                        <td>Show memory usage</td>
+                    </tr>
+                    <tr>
+                        <td>uptime</td>
+                        <td>Show system uptime</td>
+                    </tr>
+                    <tr>
+                        <td>vmstat</td>
+                        <td>Virtual memory statistics</td>
+                    </tr>
+                    <tr>
+                        <td>iostat</td>
+                        <td>CPU and I/O statistics</td>
+                    </tr>
+                    <tr>
+                        <td>dmesg</td>
+                        <td>Show kernel boot messages</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-col">
+                <h3 style="color: #38bdf8;">🌐 41–50 Networking & Advanced</h3>
+                <table>
+                    <tr>
+                        <th style="width: 35%;">Command</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td>ping google.com</td>
+                        <td>Test connectivity to host</td>
+                    </tr>
+                    <tr>
+                        <td>ifconfig</td>
+                        <td>Show network configuration</td>
+                    </tr>
+                    <tr>
+                        <td>ip a</td>
+                        <td>Show IP address details</td>
+                    </tr>
+                    <tr>
+                        <td>netstat -tulnp</td>
+                        <td>Show open ports and connections</td>
+                    </tr>
+                    <tr>
+                        <td>curl url</td>
+                        <td>Transfer data from or to a server</td>
+                    </tr>
+                    <tr>
+                        <td>wget url</td>
+                        <td>Download file from internet</td>
+                    </tr>
+                    <tr>
+                        <td>scp file user@ip:/</td>
+                        <td>Secure copy to remote server</td>
+                    </tr>
+                    <tr>
+                        <td>ssh user@ip</td>
+                        <td>Secure login to remote server</td>
+                    </tr>
+                    <tr>
+                        <td>hostname</td>
+                        <td>Show or set system hostname</td>
+                    </tr>
+                    <tr>
+                        <td>nslookup domain</td>
+                        <td>Lookup DNS information</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table-col" style="visibility: hidden; @media (max-width: 900px) { display: none; }">
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-col">
+                <h3 style="color: #a855f7;">🐙 Git</h3>
+                <table>
+                    <tr>
+                        <th style="width: 35%;">Command</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td>git init</td>
+                        <td>Initialize repository</td>
+                    </tr>
+                    <tr>
+                        <td>git add .</td>
+                        <td>Stage files</td>
+                    </tr>
+                    <tr>
+                        <td>git commit -m ""</td>
+                        <td>Commit</td>
+                    </tr>
+                    <tr>
+                        <td>git push</td>
+                        <td>Push code</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table-col">
+                <h3 style="color: #06b6d4;">🐳 Docker</h3>
+                <table>
+                    <tr>
+                        <th style="width: 35%;">Command</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td>docker build -t app .</td>
+                        <td>Build image</td>
+                    </tr>
+                    <tr>
+                        <td>docker run -p 3000:3000 app</td>
+                        <td>Run container</td>
+                    </tr>
+                    <tr>
+                        <td>docker ps</td>
+                        <td>Running containers</td>
+                    </tr>
+                    <tr>
+                        <td>docker images</td>
+                        <td>Images</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Practice Projects</h2>
+        <ul>
+            <li>Dockerize a Node.js application</li>
+            <li>Deploy Express app on AWS EC2</li>
+            <li>Create GitHub Actions CI/CD pipeline</li>
+            <li>Deploy multi-container app using Docker Compose</li>
+            <li>Deploy application to Kubernetes</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Learning Tips</h2>
+        <p>Practice every topic by building projects. Learn the command line before cloud services, then progress to
+            containers, automation, orchestration, and monitoring.</p>
+    </section>
+
+    <footer>
+        <h3>Built with ❤️ using Node.js, Express, Docker and AWS</h3>
+        <p>Complete DevOps Roadmap Demo Project</p>
+    </footer>
+</body>
+
+</html>
