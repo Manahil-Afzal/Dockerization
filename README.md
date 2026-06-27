@@ -272,6 +272,10 @@ docker run -d \
 --network mynetwork \
 -p 27017:27017 \
 mongo
+
+OR
+
+docker start mongo
 ```
 
 ---
@@ -285,6 +289,10 @@ docker run -d \
 -p 8080:3000 \
 -e MONGO_URL=mongodb://mongo:27017/mydatabase \
 dockerization
+
+OR
+docker ps
+docker start nodeapp
 ```
 
 ---
@@ -300,6 +308,10 @@ docker run -d \
 -e ME_CONFIG_BASICAUTH_USERNAME=admin \
 -e ME_CONFIG_BASICAUTH_PASSWORD=admin123 \
 mongo-express
+
+OR
+
+docker start mongo-express
 ```
 
 ---
