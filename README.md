@@ -324,7 +324,8 @@ docker start mongo-express
 | Users API | http://localhost:8080/users |
 | Add User | http://localhost:8080/add-user |
 | Mongo Express | http://localhost:8081 |
-| AWS Deployes URL |  http://51.20.118.211:3000 | http://ec2-51-20-118-211.eu-north-1.compute.amazonaws.com:3000 |
+| AWS Deploy URL |  http://51.20.118.211:3000 
+| Dockerization | http://ec2-51-20-118-211.eu-north-1.compute.amazonaws.com:3000 |
 
 ---
 
